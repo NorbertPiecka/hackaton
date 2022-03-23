@@ -1,7 +1,6 @@
 class Rectangle {
 
     constructor(positionX, positionY, width, height, type) {
-        console.log(positionX);
         this.positionX = positionX
         this.positionY = positionY
         this.width = width
@@ -20,7 +19,6 @@ class Rectangle {
                 break
             case Element.Sanke1:
                 this.color = "red"
-                this.sprite = 'img/snake_head_sprite.png'
                 break;
             case Element.Snake2:
                 this.color = "purple"
@@ -32,7 +30,7 @@ class Rectangle {
                 this.color = "green"
                 break
             case Element.Poop:
-                this.color = "brown"
+                this.color = "green"
                 break
         }
     }
@@ -40,15 +38,7 @@ class Rectangle {
     draw() {
         ctx.beginPath()
         ctx.rect(this.positionX, this.positionY, this.width, this.height)
-        ctx.fillStyle = "gray"
+        ctx.fillStyle = this.color
         ctx.fill()
-        if (this.type != "Board") {
-            const objects_sprite = new Image();
-            objects_sprite.src = this.sprite
-            objects_sprite.onload = function() {
-                ctx.drawImage(objects_sprite, 0, 0);
-            };
-    
-        }
     }
 }

@@ -10,34 +10,18 @@ Board.addFood(2)
 
 for (let i=0; i < 28; i++) {
     for (let j=0; j < 50; j++) {
-        try {
-            if (board[i][j]== "board"){
-                rec = new Rectangle(20*j,20*i,19,19, board[i][j])
-                console.log(board[i][j] + " i: " + i + " j: " + j)
-                console.log(board[i][j])
-                rec.draw()
-            }
-        } catch (e) {
-            // console.log("undefined")
-        }
+        rec = new Rectangle(20*j,20*i,19,19, board[i][j])
+        rec.draw()
     }
 }
 
-const player = new Rectangle(20,20,20,20,Element.Snake1)
-player.draw()
-
 let elment = Element.Poop
-const snake0 = new Snake(1,1,Element.Snake);
+const snake0 = new Snake(1,1,Element.Snake1);
 
 const food = {x:5,y:5}
 
 const f1 = new Rectangle(food.x*20,food.y*20,20,20,Element.Food)
 f1.draw()
-
-
-console.log(snake0)
-console.log(elment)
-console.log(player)
 
 document.addEventListener('keypress', chgDirection);
 
