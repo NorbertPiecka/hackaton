@@ -21,10 +21,14 @@ class Rectangle {
                 this.color = "red"
                 break;
             case Element.Snake2:
-                this.color = "purple"
+                this.color = "yellow"
                 break
             case Element.Snake3:
+<<<<<<< HEAD
                 this.color = "pink"
+=======
+                this.color = "blue"
+>>>>>>> d066caf5a8b8a4728e120eb92d1c9a32d6c9d4be
                 break
             case Element.Food:
                 this.color = "green"

@@ -2,8 +2,12 @@ class Snake {
     constructor(x, y,snakeType) {
         this.snakeBody = [{x:x, y:y}];
         this.snakeType = snakeType;
+<<<<<<< HEAD
         this.dead = false
         
+=======
+        console.log(snakeType)
+>>>>>>> d066caf5a8b8a4728e120eb92d1c9a32d6c9d4be
     }
     move(direction){
         if (this.dead) {
