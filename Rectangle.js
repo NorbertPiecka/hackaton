@@ -10,21 +10,29 @@ class Rectangle {
     }
 
     chooseColor() {
+        console.log("Color set: " + this.type)
         switch(this.type) {
             case Element.Wall:
                 this.color = "black"
+                break
             case Element.Board:
                 this.color = "gray"
-            case Element.Snake1:
+                break
+            case Element.Sanke1:
                 this.color = "red"
+                break
             case Element.Snake2:
                 this.color = "purple"
+                break
             case Element.Sanke3:
                 this.color = "pink"
+                break
             case Element.Food:
                 this.color = "green"
+                break
             case Element.Poop:
                 this.color = "brown"
+                break
         }
     }
 
