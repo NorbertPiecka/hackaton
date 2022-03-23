@@ -10,7 +10,6 @@ class Rectangle {
     }
 
     chooseColor() {
-        console.log("Color set: " + this.type)
         switch(this.type) {
             case Element.Wall:
                 this.color = "black"
