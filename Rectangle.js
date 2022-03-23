@@ -17,14 +17,14 @@ class Rectangle {
             case Element.Board:
                 this.color = "gray"
                 break
-            case Element.Sanke1:
+            case Element.Snake1:
                 this.color = "red"
                 break;
             case Element.Snake2:
-                this.color = "purple"
+                this.color = "yellow"
                 break
-            case Element.Sanke3:
-                this.color = "pink"
+            case Element.Snake3:
+                this.color = "blue"
                 break
             case Element.Food:
                 this.color = "green"

@@ -34,7 +34,7 @@ class Board {
         let numberOfEmptyFields = 0;
         for (let y = 0; y < 28; y++) {
             for (let x = 0; x < 50; x++) {
-                if (!board[y][x]) {
+                if (board[y][x] == Element.Board) {
                     numberOfEmptyFields++;
                 }
             }
@@ -46,7 +46,7 @@ class Board {
             let xOfFoodField = 0
             for (let y = 0; y < 28; y++) {
                 for (let x = 0; x < 50; x++) {
-                    if (!board[y][x] && numberOfFieldToAssFood > 0) {
+                    if (board[y][x] == Element.Board && numberOfFieldToAssFood > 0) {
                         yOfFoodField = y
                         xOfFoodField = x
                         numberOfFieldToAssFood--;

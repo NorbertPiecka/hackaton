@@ -2,7 +2,7 @@ class Snake {
     constructor(x, y,snakeType) {
         this.snakeBody = [{x:x, y:y}];
         this.snakeType = snakeType;
-        
+        console.log(snakeType)
     }
     move(direction,eat){
         let newHeadX;

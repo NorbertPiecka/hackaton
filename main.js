@@ -18,11 +18,6 @@ for (let i=0; i < 28; i++) {
 let elment = Element.Poop
 const snake0 = new Snake(1,1,Element.Snake1);
 
-const food = {x:5,y:5}
-
-const f1 = new Rectangle(food.x*20,food.y*20,20,20,Element.Food)
-f1.draw()
-
 document.addEventListener('keypress', chgDirection);
 
 let gameLoop = setInterval(gameStep,300);
@@ -35,7 +30,7 @@ function gameStep(){
     console.log(snake0);
    
     for(let i=0; i<snake0.size(); i++){
-        const aa = new Rectangle(snake0.getBodyElementX(i)*20,snake0.getBodyElementY(i)*20,20,20,Element.Poop)
+        const aa = new Rectangle(snake0.getBodyElementX(i)*20,snake0.getBodyElementY(i)*20,20,20,Element.Snake1)
        aa.draw();
     }
     if(step>40) clearInterval(gameLoop);
