@@ -1,6 +1,7 @@
 class Rectangle {
 
     constructor(positionX, positionY, width, height, type) {
+        console.log(positionX);
         this.positionX = positionX
         this.positionY = positionY
         this.width = width
