@@ -2,9 +2,14 @@ class Snake {
     constructor(x, y,snakeType) {
         this.snakeBody = [{x:x, y:y}];
         this.snakeType = snakeType;
+        this.dead = false
         
     }
-    move(direction,eat){
+    move(direction){
+        if (this.dead) {
+            return
+        }
+
         let newHeadX;
         let newHeadY;
         if(direction=="up"){
@@ -24,9 +29,7 @@ class Snake {
             newHeadY = this.snakeBody[0].y;
         }
         this.snakeBody = [{x:newHeadX,y:newHeadY},...this.snakeBody];
-        if(!eat){
-            this.snakeBody.pull();
-        }
+        
     }
     size(){
         return this.snakeBody.length;
@@ -37,31 +40,43 @@ class Snake {
     getBodyElementY(i){
         return this.snakeBody[i].y;
     }
-    toBoard(board){
-        let boardSizeY = board.length;
-        let boardSizeX = board[0].length;
+    toBoard(){
+        let boardSizeY = Board.board.length;
+        let boardSizeX = Board.board[0].length;
+
+        
         let headX = this.getBodyElementX(0);
         let headY = this.getBodyElementY(0);
         let collision = "clear";
         if(headX<0||headX>boardSizeX||headY<0||headY>boardSizeY){
             return false;
         }
-        if(board[headY,headX]===Element.Food) collision = "eat";
-        if(board[headY,headX]===Element.Poop) collision = "dead";
-        if(board[headY,headX]===Element.Board) collision = "dead";
-        if(board[headY,headX]===Element.Snake1) collision = "dead";
-        if(board[headY,headX]===Element.Snake2) collision = "dead";
-        if(board[headY,headX]===Element.Snake3) collision = "dead";
+        if(Board.board[headY][headX]===Element.Food) collision = "eat";
+        if(Board.board[headY][headX]===Element.Poop) collision = "dead";
+        if(Board.board[headY][headX]===Element.Wall) collision = "dead";
+        if(Board.board[headY][headX]===Element.Snake1) collision = "dead";
+        if(Board.board[headY][headX]===Element.Snake2) collision = "dead";
+        if(Board.board[headY][headX]===Element.Snake3) collision = "dead";
 
+        if (collision == "dead") {
+            console.log("DEAD!")
+            this.dead = true
+        }
 
+        if (collision == "eat") {
+
+        } else {
+            Board.board[this.snakeBody[this.snakeBody.length-1].y][this.snakeBody[this.snakeBody.length-1].x] = Element.Board
+        }
+        
         for(let i=0; i<this.size(); i++){
 
             let x = this.getBodyElementX(i);
             let y = this.getBodyElementY(i);
-            board[y,x] = this.snakeType;
+            board[y][x] = this.snakeType;
 
         }
-        if(board[headY,headX]){
+        if(board[headY][headX]){
             return collision;
         }
     }
