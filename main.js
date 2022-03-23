@@ -26,7 +26,6 @@ function drawBoard(){
 drawBoard();
 
 
-<<<<<<< HEAD
 
 
 =======
@@ -40,18 +39,6 @@ function gameStep(){
        snake1.move(p1Direction,true);
        snake1.toBoard();
        drawBoard();
-
-    
-   
-<<<<<<< HEAD
-     
-=======
-    for(let i=0; i<snake0.size(); i++){
-        const aa = new Rectangle(snake0.getBodyElementX(i)*20,snake0.getBodyElementY(i)*20,20,20,Element.Snake1)
-       aa.draw();
-    }
-    if(step>40) clearInterval(gameLoop);
->>>>>>> d066caf5a8b8a4728e120eb92d1c9a32d6c9d4be
 }
 
 let p1Direction = "right";
