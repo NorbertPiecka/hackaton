@@ -19,7 +19,8 @@ class Rectangle {
                 break
             case Element.Sanke1:
                 this.color = "red"
-                break
+                this.sprite = 'img/snake_head_sprite.png'
+                break;
             case Element.Snake2:
                 this.color = "purple"
                 break
@@ -38,7 +39,15 @@ class Rectangle {
     draw() {
         ctx.beginPath()
         ctx.rect(this.positionX, this.positionY, this.width, this.height)
-        ctx.fillStyle = this.color
+        ctx.fillStyle = "gray"
         ctx.fill()
+        if (this.type != "Board") {
+            const objects_sprite = new Image();
+            objects_sprite.src = this.sprite
+            objects_sprite.onload = function() {
+                ctx.drawImage(objects_sprite, 0, 0);
+            };
+    
+        }
     }
 }

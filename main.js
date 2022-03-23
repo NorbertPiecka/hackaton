@@ -22,3 +22,13 @@ for (let i=0; i < 28; i++) {
         }
     }
 }
+
+const player = new Rectangle(20,20,20,20,Element.Snake1)
+player.draw()
+
+let elment = Element.Snake1
+let elment = Element.Poop
+const snake0 = new Snake(1,1);
+console.log(snake0)
+console.log(elment)
+console.log(player)
