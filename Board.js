@@ -1,8 +1,5 @@
 class Board {
-    static board
-
-    static initializeBoard() {
-        board = [
+    static board = [
             [Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board],
             [Element.Board, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , Element.Board],
             [Element.Board, , Element.Board, Element.Board, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , Element.Board, Element.Board, , Element.Board],
@@ -32,11 +29,6 @@ class Board {
             [Element.Board, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , Element.Board],
             [Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board, Element.Board],
           ];
-    }
-
-    static draw() {
-        return board
-    }
 
     static addFood(numberOfFood) {
         let numberOfEmptyFields = 0;
